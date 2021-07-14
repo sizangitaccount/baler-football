@@ -1,0 +1,325 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* utilities/common design */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+/* ----------------------
+    header part design 
+-----------------------*/
+.banner-section{
+    background-color: #2D25A0;
+    padding: 86px;
+}
+
+.banner-section:hover .banner-img{
+    transform: rotate(720deg)  scale(0.75);
+    transform-origin: center;
+    overflow: hidden;
+    transition: transform 3s ease-in-out;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-text{
+    width: 49%;
+    margin-right: 25px;
+}
+
+.banner-image{
+    width: 49%;
+    margin-left: 25px;
+}
+
+.banner-image img{
+    width: 100%;
+}
+
+.website-title{
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.watch-button{
+    border: none;
+    border: 2px solid #0400ff;
+    padding: 10px 24px;
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s linear;
+    overflow: hidden;
+}
+
+.watch-button>a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    
+}
+
+.watch-button>i{
+    margin-left: 3px;
+    color:red;
+    cursor: pointer;
+}
+
+.watch-button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#0400ff;
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+}
+
+.watch-button:hover::before{
+    transform: translateX(0);
+    z-index: -1;
+}
+
+.watch-button:hover{
+    color:aqua;
+}
+
+/* ----------------------
+    players part design 
+-----------------------*/
+
+
+.players{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.players-container{
+    width: 1080px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 27px;
+    grid-row-gap: 27px;
+}
+
+.player{
+    padding: 15px;
+    width: 330px;
+    background: white;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.20);
+}
+
+.player-img{
+    width: 100%;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.description{
+    font-size: 16px;
+    color: #6c6c6c;
+    text-align: justify;
+}
+
+/* ----------------------
+    news part design 
+-----------------------*/
+.news-container{
+    display: flex;
+    justify-content: center;
+}
+
+.all-news{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.news{
+    width: 300px;
+    padding: 10px;
+}
+
+.news img{
+    width: 100%;
+}
+
+.news p{
+    color: gray;
+}
+
+.news h3>a{
+    text-decoration: none;
+    color: #1d1d1d;
+}
+
+
+/* ----------------------
+    league design 
+-----------------------*/
+.league-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.all-league{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+}
+
+.league{
+    background: white;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.league img{
+    width: 50%;
+}
+
+.league h3>a{
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #E02C6D;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+
+
+
+/* ----------------------
+    footer design 
+-----------------------*/
+
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.football-logo{
+    width: 400px;
+    margin-top: 58px;
+    margin-bottom: 20px;
+}
+
+.social-media{
+    margin-bottom: 20px;
+}
+
+.fab{
+    color: #969BAB;
+    background-color: #E7E7E8;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+/* ----------------------
+    media query 
+-----------------------*/
+
+/* --------for mobile-------- */
+@media only screen and (max-width: 688px){
+    /* --header part-- */
+    .banner-section{
+        width: 90%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .banner{
+        width: 100%;
+        flex-direction: column;
+    }
+    .banner-text{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    .website-title{
+        font-size: 36px;
+    }
+
+    .banner-image{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .banner-image img{
+        width: 100%;
+    }
+
+    /* --players part-- */
+
+    .players{
+        width: 90%;
+        margin-left: 2%;
+    }
+
+    .players-container{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .player{
+        width: 100%;
+    }
+
+    /* --all news part-- */
+    .all-news{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .title{
+        font-size: 30px;
+    }
+
+    /* --all league part-- */
+
+    .all-league{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .league{
+        margin: 5px;
+    }
+    
+    /* --footer part-- */
+
+    .football-logo{
+        width: 250px;
+        margin-bottom: 6px;
+    }
+}
