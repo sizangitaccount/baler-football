@@ -1,7 +1,9 @@
 /* google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* utilities/common design */
+/* ----------------------------
+    utilities/common design 
+-----------------------------*/
 
 body{
     margin: 0;
@@ -17,20 +19,13 @@ body{
 }
 
 /* ----------------------
-    header part design 
+    banner part design 
 -----------------------*/
+
 .banner-section{
     background-color: #2D25A0;
     padding: 86px;
 }
-
-.banner-section:hover .banner-img{
-    transform: rotate(720deg)  scale(0.75);
-    transform-origin: center;
-    overflow: hidden;
-    transition: transform 3s ease-in-out;
-}
-
 .banner{
     display: flex;
     justify-content: space-between;
@@ -51,6 +46,13 @@ body{
     width: 100%;
 }
 
+.banner-section:hover .banner-img{
+    transform: rotate(360deg) scale(0.70);
+    transform-origin: center;
+    overflow: hidden;
+    transition: transform 3s ease-in-out;
+}
+
 .website-title{
     color: white;
     font-style: normal;
@@ -60,10 +62,10 @@ body{
 
 .watch-button{
     border: none;
-    border: 2px solid #0400ff;
+    border: 2px solid #E02C6D;
     padding: 10px 24px;
     position: relative;
-    z-index: 10;
+    z-index: 1;
     transition: all 0.3s linear;
     overflow: hidden;
 }
@@ -78,7 +80,7 @@ body{
 
 .watch-button>i{
     margin-left: 3px;
-    color:red;
+    color: black;
     cursor: pointer;
 }
 
@@ -89,7 +91,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:#0400ff;
+    background-color: blue;
     transform: translateX(-100%);
     transition: all 0.3s linear;
 }
@@ -100,8 +102,9 @@ body{
 }
 
 .watch-button:hover{
-    color:aqua;
+    color:rgb(155, 110, 110);
 }
+
 
 /* ----------------------
     players part design 
@@ -144,9 +147,12 @@ body{
     text-align: justify;
 }
 
+
 /* ----------------------
     news part design 
 -----------------------*/
+
+
 .news-container{
     display: flex;
     justify-content: center;
@@ -178,6 +184,8 @@ body{
 /* ----------------------
     league design 
 -----------------------*/
+
+
 .league-container{
     display: flex;
     justify-content: center;
@@ -213,8 +221,6 @@ body{
 }
 
 
-
-
 /* ----------------------
     footer design 
 -----------------------*/
@@ -248,9 +254,10 @@ body{
     media query 
 -----------------------*/
 
+
 /* --------for mobile-------- */
 @media only screen and (max-width: 688px){
-    /* --header part-- */
+    /* --banner part-- */
     .banner-section{
         width: 90%;
         padding-left: 16px;
@@ -321,5 +328,71 @@ body{
     .football-logo{
         width: 250px;
         margin-bottom: 6px;
+    }
+}
+
+
+/* --------for Tablet part-------- */
+
+@media only screen and (min-width: 689px) and (max-width: 991px){
+    /* --banner part-- */
+    .banner-section{
+        width: 90%;
+        padding: 8% 4%;
+    }
+
+    .website-title{
+        font-size: 40px;
+    }
+
+    .banner{
+        width: 100%;
+    }
+
+    .banner-text{
+        width: 100%;
+    }
+
+    .banner-image{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .banner-image img{
+        width: 100%;
+    }
+
+    /* --players part-- */
+
+    .players{
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .players-container{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* --all news part-- */
+
+    .all-news{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .title{
+        font-size: 30px;
+    }
+
+    /* --all league part-- */
+
+    .all-league{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .league{
+        margin: 5px;
     }
 }
